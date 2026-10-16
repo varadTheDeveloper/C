@@ -1,0 +1,6 @@
+id,name,category,brand,specs,warranty,stock,condition,offer,featured,image
+ryzen5-5600gt-setup,Ryzen 5 gaming / performance PC,pc-setups,AMD + MSI,AMD Ryzen 5 5600GT | MSI B550 Wi-Fi 6 motherboard | 16GB RAM | 512GB NVMe SSD | 500W SMPS | RGB gaming cabinet,3 years,in,new,yes,yes,
+i5-12th-setup,Intel i5 12th Gen computer setup,pc-setups,Intel + MSI,Intel Core i5 12th Gen | MSI H610 motherboard | 8GB RAM | 512GB SSD | NVIDIA GT 730 4GB | 22-inch IPS monitor | Keyboard + mouse,,in,new,yes,yes,
+lenovo-360-i5,Lenovo 360° touchscreen laptop,laptops,Lenovo,Intel Core i5 8th Gen | 8GB RAM | 256GB SSD | 360° convertible touchscreen | Pen support,,in,,yes,yes,
+hp-i5-metal,HP metal body laptop,laptops,HP,Intel Core i5 8th Gen | 8GB RAM | 256GB SSD | Metal body | Windows 11 Pro,,in,,no,yes,
+mac-mini-m4-openbox,Apple Mac Mini M4,open-box,Apple,10-core CPU + 10-core GPU | 16GB unified memory | 256GB SSD | 3× Thunderbolt 4 + HDMI,5 months,out,open-box,no,no,
