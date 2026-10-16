@@ -64,9 +64,14 @@
   function load() {
     if (cache) return cache;
     var url = SHOP.productsCsvUrl || SHOP.sampleCsvUrl;
-    cache = fetch(url, { cache: "no-cache" })
-      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); })
-      .then(function (t) { return toProducts(parseCsv(t)); });
+    var sample = !SHOP.productsCsvUrl && window.SAMPLE_CSV;
+    // Opened by double-click (file://): browsers block fetch, so use the JS copy of the sample list
+    var text = sample && location.protocol === "file:"
+      ? Promise.resolve(sample)
+      : fetch(url, { cache: "no-cache" })
+        .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); })
+        .catch(function (e) { if (sample) return sample; throw e; });
+    cache = text.then(function (t) { return toProducts(parseCsv(t)); });
     return cache;
   }
 

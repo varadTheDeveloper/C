@@ -96,7 +96,7 @@
 
   function card(p) {
     var media = p.image
-      ? '<img src="' + esc(p.image) + '" alt="" loading="lazy">'
+      ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy" referrerpolicy="no-referrer" data-fallback="' + esc(p.category) + '" data-seed="' + esc(p.id) + '">'
       : ART.make(p.category, p.id);
     return '<li class="card" data-card="' + esc(p.id) + '">' +
       '<div class="card-media">' + media +
@@ -153,11 +153,11 @@
     if (!root) return;
     root.innerHTML = rails().map(function (r) {
       return '<section class="section rail" aria-labelledby="rail-' + r.key + '">' +
-        '<div class="wrap">' +
+        '<div class="wrap"><div class="rail-box">' +
         '<div class="rail-head"><h2 class="h2" id="rail-' + r.key + '">' + esc(r.title) + "</h2>" +
-        '<a class="see-all" href="' + r.href + '">' + esc(t("see_all")) + ICONS.get("chevron-right", 18) + "</a></div>" +
+        '<a class="see-all" href="' + r.href + '" aria-label="' + esc(t("see_all") + ": " + r.title) + '"><span class="see-all-text">' + esc(t("see_all")) + "</span>" + ICONS.get("chevron-right", 18) + "</a></div>" +
         '<ul class="rail-list">' + r.items.slice(0, 10).map(card).join("") + "</ul>" +
-        "</div></section>";
+        "</div></div></section>";
     }).join("");
   }
 
@@ -194,7 +194,7 @@
       }
       box.innerHTML = '<ul class="sr-list">' + hits.map(function (p) {
         return '<li class="sr-item" data-card="' + esc(p.id) + '">' +
-          '<span class="sr-art">' + (p.image ? '<img src="' + esc(p.image) + '" alt="">' : ART.make(p.category, p.id)) + "</span>" +
+          '<span class="sr-art">' + (p.image ? '<img src="' + esc(p.image) + '" alt="" referrerpolicy="no-referrer" data-fallback="' + esc(p.category) + '" data-seed="' + esc(p.id) + '">' : ART.make(p.category, p.id)) + "</span>" +
           '<span class="sr-text"><strong>' + esc(p.name) + "</strong><span>" + esc(shortSpecs(p)) + "</span></span>" +
           '<span class="card-add">' + addControl(p) + "</span></li>";
       }).join("") + "</ul>";
@@ -259,9 +259,20 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll("[data-lang]").forEach(function (b) {
-      b.addEventListener("click", function () { i18n.set(b.getAttribute("data-lang")); });
-    });
+    var lang = document.getElementById("lang");
+    if (lang) {
+      lang.value = i18n.lang;
+      lang.addEventListener("change", function () { i18n.set(lang.value); });
+    }
+    // If a product photo fails to load, show the drawn picture instead
+    document.addEventListener("error", function (e) {
+      var img = e.target;
+      if (img.tagName !== "IMG" || !img.hasAttribute("data-fallback")) return;
+      var holder = document.createElement("span");
+      holder.className = "art-fallback";
+      holder.innerHTML = ART.make(img.getAttribute("data-fallback"), img.getAttribute("data-seed"));
+      img.replaceWith(holder);
+    }, true);
     i18n.apply();
     fillIcons();
     Quote.init();

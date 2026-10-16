@@ -5,35 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Computer Warehouse Jalna | लॅपटॉप, कॉम्प्युटर, प्रिंटर</title>
   <meta name="description" content="Computer Warehouse Jalna: laptops, complete computer setups, printers, PC parts and repair at Shani Mandir Chowk, Old Jalna. Get today's price on WhatsApp.">
-  <meta name="theme-color" content="#2C3A5E">
-  <link rel="preload" href="assets/fonts/mukta-devanagari-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/mukta-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="theme-color" content="#2A6BE6">
+  <link rel="preload" href="assets/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/noto-sans-devanagari-devanagari-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <a class="skip" href="#main" data-i18n="skip">मुख्य मजकुराकडे जा</a>
 
-  <div class="strip">
-    <div class="wrap strip-inner">
-      <p class="strip-info">
-        <span class="strip-dot" aria-hidden="true"></span>
-        <span data-i18n="top_open"></span>
-        <span class="strip-place" data-i18n="top_place"></span>
-      </p>
-      <div class="lang" role="group" aria-label="Language / भाषा">
-        <button type="button" data-lang="mr" aria-pressed="true">मराठी</button>
-        <button type="button" data-lang="hi" aria-pressed="false">हिंदी</button>
-        <button type="button" data-lang="en" aria-pressed="false">English</button>
-      </div>
-    </div>
-  </div>
-
   <header class="header">
     <div class="wrap header-inner">
       <a class="logo" href="index.html" aria-label="Computer Warehouse Jalna">
-        <span class="logo-mark" data-icon="mark"></span>
-        <span class="logo-text"><span class="logo-name">Computer Warehouse</span><span class="logo-city">Jalna</span></span>
+        <span class="logo-name">Computer Warehouse</span>
+        <span class="logo-sub"><span data-icon="pin" data-size="12"></span>Jalna</span>
       </a>
 
       <form class="search" role="search" id="search" autocomplete="off">
@@ -43,16 +28,24 @@
         <div class="search-results" id="search-results" hidden></div>
       </form>
 
+      <label class="lang">
+        <span class="sr-only">Language / भाषा</span>
+        <span class="lang-icon" data-icon="globe" data-size="18"></span>
+        <select id="lang">
+          <option value="mr">मराठी</option>
+          <option value="hi">हिंदी</option>
+          <option value="en">English</option>
+        </select>
+      </label>
+
       <nav class="header-nav" aria-label="Main">
         <a href="build.html" data-i18n="nav_build">पीसी बनवा</a>
         <a href="repair.html" data-i18n="nav_repair">दुरुस्ती</a>
-        <a href="#visit" data-i18n="nav_visit">दुकानात या</a>
       </nav>
 
       <button type="button" class="quote-btn" data-open-quote>
-        <span data-icon="quote"></span>
+        <span class="quote-btn-icon"><span data-icon="quote"></span><span class="quote-count" data-quote-count hidden>0</span></span>
         <span class="quote-btn-text" data-i18n="quote_btn">कोटेशन यादी</span>
-        <span class="quote-count" data-quote-count hidden>0</span>
       </button>
     </div>
   </header>
@@ -76,7 +69,7 @@
                 <p class="slide-text" data-i18n="b1_b"></p>
                 <a class="btn btn-yellow" data-wa="wa_offer" href="#" data-i18n="offer_btn"></a>
               </div>
-              <div class="slide-art" data-art="laptops" data-seed="offer-a"></div>
+              <div class="slide-photo"><img src="https://in.canon/media/image/2026/03/21/7b1afd84ee1449b58a7e0d2359e77d3b_G3012-Image-opt1.png" alt="" referrerpolicy="no-referrer" data-fallback="printers"></div>
             </article>
             <article class="slide slide-build">
               <div class="slide-copy">
@@ -84,7 +77,7 @@
                 <p class="slide-text" data-i18n="b2_b"></p>
                 <a class="btn btn-yellow" href="build.html" data-i18n="build_btn"></a>
               </div>
-              <div class="slide-art" data-art="pc-setups" data-seed="build-b"></div>
+              <div class="slide-photo slide-photo-dark"><img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/news/rtx-5060-out-now/ASUS-dual-geforce-rtx-5060-1920x1080.png" alt="" referrerpolicy="no-referrer" data-fallback="pc-setups"></div>
             </article>
             <article class="slide slide-repair">
               <div class="slide-copy">
@@ -139,10 +132,10 @@
     </section>
 
     <section class="section brands-section" aria-labelledby="brands-title">
-      <div class="wrap">
+      <div class="wrap"><div class="brands-box">
         <h2 class="h2" id="brands-title" data-i18n="brands_t"></h2>
         <ul class="brands" id="brands"></ul>
-      </div>
+      </div></div>
     </section>
 
     <section class="section visit" id="visit">
@@ -173,8 +166,8 @@
       <div class="footer-cols">
         <div class="footer-about">
           <a class="logo logo-light" href="index.html" aria-label="Computer Warehouse Jalna">
-            <span class="logo-mark" data-icon="mark"></span>
-            <span class="logo-text"><span class="logo-name">Computer Warehouse</span><span class="logo-city">Jalna</span></span>
+            <span class="logo-name">Computer Warehouse</span>
+            <span class="logo-sub"><span data-icon="pin" data-size="12"></span>Jalna</span>
           </a>
           <p data-i18n="f_about"></p>
           <p class="footer-tag" data-i18n="footer_tag"></p>
@@ -240,6 +233,7 @@
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/icons.js"></script>
   <script src="assets/js/art.js"></script>
+  <script src="data/sample-products.js"></script>
   <script src="assets/js/products.js"></script>
   <script src="assets/js/quote.js"></script>
   <script src="assets/js/app.js"></script>
