@@ -118,8 +118,10 @@ Results are in section 6. **Wait for the user to say "start" before building any
 
 ## 5. Still needed from the user / shopkeeper before building
 - ~~Shop name~~ → Computer Warehouse (Jalna). Confirm the exact name to use on the site.
-- **Which number is WhatsApp:** 9307570781 or 8888479687
-- **Opening hours** (not shown on Instagram)
+- **Which number is WhatsApp:** 9307570781 or 8888479687 (9307570781 is the number on Google
+  and the main one on Instagram, so it is likely, but confirm)
+- ~~Opening hours~~ → 9am–10:30pm, all 7 days (from Google, see section 7). Confirm with the
+  shopkeeper.
 - **Shipping:** does the shop already courier outside Jalna ("Online order" / "Online parcel"
   highlights)? If yes, which courier and how is it charged?
 - Language: English only, or also Marathi/Hindi (suggestion: Marathi + English)
@@ -205,3 +207,34 @@ Story highlights on the shop account include **"Online order"** and **"ऑनल
   8. Repair & Service (enquiry form to WhatsApp)
 - Home page: festival offer banner, featured bundles, "Build my PC", Instagram reels link,
   shop location map, call/WhatsApp buttons.
+
+---
+
+## 7. Google Maps listing (checked 16 Oct 2026)
+
+Listing name: **COMPUTER WAREHOUSE JALNA** (कंप्यूटर वेयरहाउस जलना), category "Computer store".
+
+- **Rating:** 4.9 stars, 284 reviews.
+- **Address (as on Google):** Shop No 17, Vitthala Tower, 18, Shani Mandir Road, Old Jalna,
+  Bhagya Nagar, Jalna, Maharashtra 431213. Plus code: RVQJ+QR Jalna.
+- **Map location:** 19.8394922, 75.8820408
+- **Phone:** 093075 70781
+- **Website field:** links to their Instagram (no website yet).
+- **Hours:** 9am–10:30pm, every day (Mon–Sun). Google notes hours may differ on festival days.
+- **Service options:** delivery, on-site services.
+- **Offerings:** assembly service (PC building).
+- **Payments:** debit cards, NFC mobile payments.
+- **Review topics** (how often customers mention them): laptop (61), gaming setup (12),
+  refurbished laptops (9), laptop repair (8). Confirms laptops as the top category, plus
+  gaming setups, refurbished/open-box and repair.
+
+### Use on the website
+- Show **"4.9★ on Google · 284 reviews"** with a link to the Google reviews page. Do not copy
+  review text onto the site without the shopkeeper's approval; linking is enough.
+- **Location section:** embedded Google Map at the coordinates above, plus a
+  **"Get directions"** button (`https://www.google.com/maps/dir/?api=1&destination=19.8394922,75.8820408`).
+- Show the hours: **9am–10:30pm, all days**.
+- Show payment options at the shop: debit card and tap-to-pay (from Google). Confirm UPI and
+  cash with the shopkeeper before listing them.
+- After launch, put the new website link in the Google listing's **Website** field
+  (it currently points to Instagram). Helps local search.
