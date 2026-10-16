@@ -27,8 +27,13 @@
     save();
   }
   function setQty(id, qty) {
-    items.forEach(function (i) { if (i.id === id) i.qty = Math.max(1, Math.min(99, qty)); });
+    if (qty < 1) { remove(id); return; }
+    items.forEach(function (i) { if (i.id === id) i.qty = Math.min(99, qty); });
     save();
+  }
+  function qty(id) {
+    var it = items.filter(function (i) { return i.id === id; })[0];
+    return it ? it.qty : 0;
   }
 
   function waLink(text) {
@@ -139,5 +144,5 @@
     render();
   }
 
-  window.Quote = { init: init, add: add, has: has, waLink: waLink, esc: esc };
+  window.Quote = { init: init, add: add, has: has, qty: qty, setQty: setQty, waLink: waLink, esc: esc };
 })();
