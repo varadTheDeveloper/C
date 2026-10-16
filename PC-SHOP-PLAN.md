@@ -7,6 +7,11 @@ so far, and what this Desktop session needs to do.
 "do not start yet". First do the research task below, then report back and wait for the user to
 say "start".
 
+> **Update (16 Oct 2026):** the Instagram research in section 4 is done. Findings are in
+> **section 6**. They change a few things: the shop sells laptops, complete PC setups, open-box
+> items and printers (not only parts), some offers show a fixed price, and the shop already does
+> online orders / parcels. Still waiting for the user to say "start".
+
 ---
 
 ## 1. The problem
@@ -45,6 +50,8 @@ The customer never pays until the shopkeeper confirms today's price.
 - **Shipping is handled by the shopkeeper:** pickup from the shop, or local delivery by the
   shopkeeper/staff. The delivery charge goes inside the quote. Courier to other cities
   (for example Shiprocket) can come later if needed.
+  *(Check: the shop's Instagram has "Online order" and "Online parcel" highlights, so they may
+  already ship outside Jalna. See section 6.)*
 - **Be careful with cash on delivery for expensive items** (risk of the customer refusing a
   ₹30,000 part at the door). Not finally decided: COD for small orders only, or a small advance.
 - The shopkeeper should use the free **WhatsApp Business app** (quick replies, labels like
@@ -54,9 +61,10 @@ The customer never pays until the shopkeeper confirms today's price.
 
 ### Website features (first version)
 - Product pages: photo, name, brand, specs, warranty, stock (In stock / Available on order /
-  Out of stock). **No price anywhere.**
+  Out of stock). **No price anywhere.** *(Proposed change, see section 6: allow an optional
+  "offer price" on a few featured festival bundles.)*
 - Category filter and search. Categories: CPU, GPU, RAM, SSD/Storage, Motherboard, PSU,
-  Cabinet, Monitor (to confirm with the shopkeeper).
+  Cabinet, Monitor (to confirm with the shopkeeper). *(See section 6 for suggested categories.)*
 - Quote list with quantity, then "Get Price on WhatsApp". The message includes items, pickup or
   delivery (with area), optional name, optional GST number, and a note.
 - **"Build my PC" form:** budget, use (gaming / office / editing), preferences. Sent to WhatsApp.
@@ -69,6 +77,8 @@ The customer never pays until the shopkeeper confirms today's price.
   published as CSV (File > Share > Publish to web > CSV). The website reads that sheet. To add
   a product, the shopkeeper adds a row. Columns, roughly: id, name, category, brand, specs,
   warranty, stock, image link, featured.
+  *(If offer prices are added: an optional `offer_price` column, shown only when filled.
+  An optional `condition` column: New / Open box.)*
 - The site is a simple static site (HTML/CSS/JavaScript), so hosting can be free
   (GitHub Pages, Netlify or Cloudflare Pages).
 - Option 2 (not chosen for now): reuse the admin panel of the user's other project (below). It
@@ -95,35 +105,103 @@ wishlist, Docker deployment. We decided the PC shop **does not need most of this
 start, because WhatsApp handles pricing, payment and contact. It is a reference for later
 (for example if the shop grows and wants an admin panel or online payments).
 
-## 4. What this Desktop session needs to do now
+## 4. Research task: DONE (16 Oct 2026)
 
 The cloud session could not open the shopkeeper's Instagram (Instagram blocks visitors who are
-not logged in). This Desktop session can, through **Claude in Chrome** in the user's own
-browser where they are logged in to Instagram.
+not logged in). It was done through **Claude in Chrome** in the user's own browser.
 
-**Task: research the shopkeeper's Instagram account**
-https://www.instagram.com/computer_warehouse02/
+Accounts checked:
+- https://www.instagram.com/computer_warehouse02/ (owner's account)
+- https://www.instagram.com/computer_warehouse_jalna/ (shop account)
 
-Find and write down:
-1. Shop name, and the exact name used in the bio
-2. City and address
-3. Phone / WhatsApp number (if shown in the bio or posts)
-4. What they sell most: parts, full PC builds, laptops, used/refurbished items, accessories
-5. Popular brands in their posts
-6. How they handle prices now: do posts say "DM for price"? Do they ever show prices?
-7. Logo and brand colours, and the general style of their posts
-8. Whether their posts have good real product photos we could use (with permission)
-9. Follower count, roughly how often they post, and opening hours if mentioned
-10. Anything else useful for the website (offers, services like PC building or repair,
-    reviews)
+Results are in section 6. **Wait for the user to say "start" before building anything.**
 
-Then **report back to the user** with a short summary, and suggest the starting product
-categories, the site name and colours based on what you found. **Wait for the user to say
-"start" before building anything.**
-
-## 5. Still needed from the user before building
-- Shop name
-- WhatsApp number
-- Language: English only, or also Hindi/Marathi
+## 5. Still needed from the user / shopkeeper before building
+- ~~Shop name~~ → Computer Warehouse (Jalna). Confirm the exact name to use on the site.
+- **Which number is WhatsApp:** 9307570781 or 8888479687
+- **Opening hours** (not shown on Instagram)
+- **Shipping:** does the shop already courier outside Jalna ("Online order" / "Online parcel"
+  highlights)? If yes, which courier and how is it charged?
+- Language: English only, or also Marathi/Hindi (suggestion: Marathi + English)
 - Where to build it: inside the `varadTheDeveloper/C` repo (in a `pc-shop/` folder) or a new repo
 - COD rule (small orders only, or a small advance)
+- Logo, if they have one (none seen on Instagram)
+- Permission to use their reel footage / screenshots on the site
+- Whether to show fixed "offer prices" on festival bundles
+
+---
+
+## 6. Instagram research findings (16 Oct 2026)
+
+### Shop details
+- **Shop name:** COMPUTER WAREHOUSE. Posts use **"Computer Warehouse Jalna"**.
+- **Owner:** Amol Jagtap Patil (अमोल जगताप पाटील).
+- **Two Instagram accounts** (most reels are posted as collabs on both):
+  - @computer_warehouse02: owner's account, about 113k followers, 171 posts, "Digital creator".
+  - @computer_warehouse_jalna: shop account, about 36.4k followers, about 1,300 posts.
+  - Also a Facebook page ("Computer warehouse") and Threads.
+- **Address:** Shop No. 17 & 18, Vitthala Tower, Shani Mandir Chowk, Old Jalna
+  (bio: शनी मंदिर चौक जुना जालना विठ्ठला टॉवर).
+- **Phone:** 9307570781 (main number used in captions), 8888479687. Not marked which is WhatsApp.
+- **Bio:** "SALES & SERVICES", "जय महाराष्ट्र", "मराठी उद्योजक".
+- **Opening hours:** not shown.
+
+### What they sell
+Not only PC parts. From posts and reels:
+- **Laptops:** new and **open box** (e.g. open-box Mac Mini M4, 16GB/256GB, 5 months warranty)
+- **Complete PC setups** (e.g. Ryzen 5 5600GT + MSI B550 Wi-Fi 6 + 16GB + 512GB NVMe + 500W +
+  RGB cabinet, 3 years warranty)
+- **Printers**, including colour printers
+- PC parts, monitors, accessories
+- **Service / repair** ("Sales & Services")
+
+Brands seen: Acer (Nitro), MSI, AMD Ryzen, Apple, HP, Zebronics.
+
+### How they handle prices now
+Mixed:
+- **Single items:** "Price जाणून घेण्यासाठी Comment करा — PRICE", "DM करा / Shop ला Visit करा".
+  So no price shown, which matches the WhatsApp quote plan.
+- **Festival offers / bundles:** fixed price shown, e.g. Navratri special PC at ₹46,500.
+
+**Suggestion:** keep "price on WhatsApp" for everything, plus an optional **offer price** for a
+few featured bundles that the shopkeeper chooses (shown only when the sheet column is filled).
+
+### Online orders / delivery
+Story highlights on the shop account include **"Online order"** and **"ऑनलाइन पार्सल"**
+(online parcel). They likely already ship outside Jalna. Confirm before finalising the
+"local delivery only" decision.
+
+### Style
+- Almost all content is **Marathi** reels with the owner on camera inside the shop.
+- Shop look: bright **yellow** shelves, boxes everywhere; text overlays in **red/saffron** and
+  white; RGB PCs.
+- Tagline: **"तुमचा विश्वास, आमची जबाबदारी!"** (Your trust, our responsibility!)
+- Posting: very active, about every 1–3 days. Festival offers (Navratri, Holi); a
+  **Diwali lucky draw** is announced as coming soon.
+- Other highlights: shop, warehouse, gaming, followers milestones.
+- **No proper logo** seen, only the owner's photo as the profile picture.
+
+### Photos
+- **No clean product photos.** Content is video with the owner in frame.
+- Usable (with permission) for an About / Visit the shop section and for trust, not for
+  product cards.
+- Product cards: keep the plan from section 2 (SVG placeholders, then the shopkeeper's own
+  phone photos or official brand photos).
+
+### Suggestions for the site
+- **Site name:** Computer Warehouse Jalna
+- **Language:** Marathi + English (audience is Marathi-first)
+- **Colours:** warm yellow/saffron as the main colour, red for offers, on near-black or white.
+  Matches the shop walls and their post style.
+- **Tagline on site:** तुमचा विश्वास, आमची जबाबदारी!
+- **Starting categories:**
+  1. Laptops
+  2. Open Box Deals
+  3. Complete PC Setups
+  4. Printers
+  5. PC Parts (CPU, GPU, RAM, SSD/Storage, Motherboard, PSU, Cabinet)
+  6. Monitors
+  7. Accessories
+  8. Repair & Service (enquiry form to WhatsApp)
+- Home page: festival offer banner, featured bundles, "Build my PC", Instagram reels link,
+  shop location map, call/WhatsApp buttons.
