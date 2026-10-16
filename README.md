@@ -1,10 +1,6 @@
-# C
+# Computer Warehouse Jalna – website
 
-C programming projects.
+Website for **Computer Warehouse Jalna**, a computer and laptop shop in Old Jalna, Maharashtra.
 
-## Build & run
-
-```sh
-make
-./hello
-```
+- Plan and decisions: [`PC-SHOP-PLAN.md`](PC-SHOP-PLAN.md)
+- Website code: `pc-shop/` (not started yet)

@@ -10,7 +10,9 @@ say "start".
 > **Update (16 Oct 2026):** the Instagram research in section 4 is done. Findings are in
 > **section 6**. They change a few things: the shop sells laptops, complete PC setups, open-box
 > items and printers (not only parts), some offers show a fixed price, and the shop already does
-> online orders / parcels. Still waiting for the user to say "start".
+> online orders / parcels. Google Maps details are in **section 7**. The user's final answers
+> are in **section 5** and override earlier text (e.g. no prices at all, even on offers).
+> Still waiting for the user to say "start".
 
 ---
 
@@ -116,20 +118,34 @@ Accounts checked:
 
 Results are in section 6. **Wait for the user to say "start" before building anything.**
 
-## 5. Still needed from the user / shopkeeper before building
-- ~~Shop name~~ → Computer Warehouse (Jalna). Confirm the exact name to use on the site.
-- **Which number is WhatsApp:** 9307570781 or 8888479687 (9307570781 is the number on Google
-  and the main one on Instagram, so it is likely, but confirm)
-- ~~Opening hours~~ → 9am–10:30pm, all 7 days (from Google, see section 7). Confirm with the
-  shopkeeper.
-- **Shipping:** does the shop already courier outside Jalna ("Online order" / "Online parcel"
-  highlights)? If yes, which courier and how is it charged?
-- Language: English only, or also Marathi/Hindi (suggestion: Marathi + English)
-- Where to build it: inside the `varadTheDeveloper/C` repo (in a `pc-shop/` folder) or a new repo
-- COD rule (small orders only, or a small advance)
-- Logo, if they have one (none seen on Instagram)
-- Permission to use their reel footage / screenshots on the site
-- Whether to show fixed "offer prices" on festival bundles
+## 5. Final decisions (user answers, 16 Oct 2026)
+
+These override anything earlier in this file that says otherwise.
+
+- **Shop name:** Computer Warehouse Jalna.
+- **WhatsApp number:** **9307570781** (confirmed). All "Get Price on WhatsApp" links use
+  `https://wa.me/919307570781?text=...`.
+- **Opening hours:** 9am–10:30pm, all 7 days (from Google, section 7).
+- **Delivery outside Jalna:** handled **on WhatsApp**. The quote message asks for pickup /
+  Jalna delivery / other city (with city name). The shopkeeper replies with the delivery charge.
+  The site does not show courier options or charges.
+- **Cash on delivery:** decided **on WhatsApp**, order by order. The site does not promise COD.
+- **Prices:** **no prices anywhere on the site, including festival offers.** Offer items get a
+  "Festival Offer" / "Special Offer" badge and the same "Get Price on WhatsApp" button.
+  The `offer_price` column idea from section 2 is **dropped**. Keep an `offer` (yes/no) column
+  for the badge, and the `condition` column (New / Open box).
+- **Languages:** **Marathi, Hindi and English**, with a language switch at the top.
+  Default: Marathi.
+- **Logo:** a clean **text logo of the shop name** ("COMPUTER WAREHOUSE" / "Jalna") in the shop's
+  yellow and red. Before designing it, look at the shop signboard photos on the Google Maps
+  listing so the logo matches the board people already know.
+- **Where to build:** in this repo, `varadTheDeveloper/C`, in a **`pc-shop/`** folder. The old
+  C files (`hello.c`, `Makefile`, `.gitignore`) were removed and the README now describes this
+  project.
+- **Domain:** to be decided later. Build so the site works on a free hosting link first.
+- **Still open:** permission to use his reel footage / screenshots on the site.
+
+**Status: do not start building until the user says "start".**
 
 ---
 
