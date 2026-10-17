@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="mr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Products | Computer Warehouse Jalna</title>
+  <meta name="description" content="Laptops, complete computer setups, printers, monitors and PC parts at Computer Warehouse Jalna. Add items and get today's price on WhatsApp.">
+  <meta name="theme-color" content="#2A6BE6">
+  <link rel="preload" href="assets/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/noto-sans-devanagari-devanagari-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="products">
+  <a class="skip" href="#main" data-i18n="skip"></a>
+  <div data-layout="header"></div>
+
+  <main id="main" class="pp">
+    <div class="pp-bar">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html" data-i18n="crumb_home"></a>
+          <span data-icon="chevron-right" data-size="14"></span>
+          <span id="crumb-here" aria-current="page"></span>
+        </nav>
+        <ul class="chips" id="cat-chips" aria-label="Categories"></ul>
+      </div>
+    </div>
+
+    <div class="wrap pp-layout">
+      <aside class="filters" aria-label="Filters">
+        <label class="filter">
+          <span class="filter-label" data-i18n="f_brand"></span>
+          <select id="f-brand"></select>
+        </label>
+        <label class="filter">
+          <span class="filter-label" data-i18n="f_condition"></span>
+          <select id="f-cond"></select>
+        </label>
+        <label class="filter filter-check">
+          <input type="checkbox" id="f-instock">
+          <span data-i18n="f_instock"></span>
+        </label>
+        <label class="filter filter-check">
+          <input type="checkbox" id="f-offer">
+          <span data-i18n="f_offers"></span>
+        </label>
+        <button type="button" class="link-btn filter-clear" id="f-clear" hidden data-i18n="f_clear"></button>
+      </aside>
+
+      <section class="pp-main" aria-labelledby="pp-title">
+        <div class="pp-head">
+          <div>
+            <h1 class="h2" id="pp-title"></h1>
+            <p class="pp-count" id="pp-count" aria-live="polite"></p>
+          </div>
+          <label class="sort">
+            <span class="sr-only" data-i18n="f_sort"></span>
+            <select id="f-sort"></select>
+          </label>
+        </div>
+        <ul class="grid" id="grid"></ul>
+        <div class="pp-empty" id="pp-empty" hidden>
+          <span class="pp-empty-art" data-art="pc-setups" data-seed="empty"></span>
+          <h2 class="h2" data-i18n="pp_empty_t"></h2>
+          <p data-i18n="pp_empty_b"></p>
+          <a class="btn btn-wa" id="pp-empty-wa" href="#" target="_blank" rel="noopener"><span data-icon="whatsapp"></span><span data-i18n="search_ask"></span></a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div data-layout="footer"></div>
+  <div data-layout="bottom"></div>
+  <div data-layout="quote"></div>
+
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/art.js"></script>
+  <script src="data/sample-products.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/quote.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

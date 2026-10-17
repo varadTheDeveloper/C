@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="mr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Repair & service | Computer Warehouse Jalna</title>
+  <meta name="description" content="Laptop, computer and printer repair at Computer Warehouse Jalna. Tell us the problem on WhatsApp.">
+  <meta name="theme-color" content="#2A6BE6">
+  <link rel="preload" href="assets/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/noto-sans-devanagari-devanagari-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="repair">
+  <a class="skip" href="#main" data-i18n="skip"></a>
+  <div data-layout="header"></div>
+
+  <main id="main" class="form-page">
+    <div class="wrap form-wrap">
+      <div class="form-hero">
+        <div>
+          <h1 data-i18n="rp_title"></h1>
+          <p data-i18n="rp_intro"></p>
+        </div>
+        <span class="form-hero-art" data-art="repair" data-seed="repair-hero"></span>
+      </div>
+
+      <form class="form-card" id="repair-form" novalidate>
+        <p class="form-error" id="repair-error" role="alert" hidden></p>
+        <fieldset class="q">
+          <legend data-i18n="rp_device"></legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="device" value="dev_laptop"><span data-i18n="dev_laptop"></span></label>
+            <label class="opt"><input type="radio" name="device" value="dev_desktop"><span data-i18n="dev_desktop"></span></label>
+            <label class="opt"><input type="radio" name="device" value="dev_printer"><span data-i18n="dev_printer"></span></label>
+            <label class="opt"><input type="radio" name="device" value="dev_monitor"><span data-i18n="dev_monitor"></span></label>
+            <label class="opt"><input type="radio" name="device" value="dev_other"><span data-i18n="dev_other"></span></label>
+          </div>
+        </fieldset>
+        <div class="form-fields">
+          <label class="field"><span data-i18n="rp_model"></span><input name="model" placeholder="HP 15s, Dell Latitude 5400…"></label>
+        </div>
+        <fieldset class="q">
+          <legend data-i18n="rp_problem"></legend>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="problem" value="pr_power"><span data-i18n="pr_power"></span></label>
+            <label class="opt"><input type="checkbox" name="problem" value="pr_slow"><span data-i18n="pr_slow"></span></label>
+            <label class="opt"><input type="checkbox" name="problem" value="pr_screen"><span data-i18n="pr_screen"></span></label>
+            <label class="opt"><input type="checkbox" name="problem" value="pr_keyboard"><span data-i18n="pr_keyboard"></span></label>
+            <label class="opt"><input type="checkbox" name="problem" value="pr_battery"><span data-i18n="pr_battery"></span></label>
+            <label class="opt"><input type="checkbox" name="problem" value="pr_body"><span data-i18n="pr_body"></span></label>
+            <label class="opt"><input type="checkbox" name="problem" value="pr_windows"><span data-i18n="pr_windows"></span></label>
+            <label class="opt"><input type="checkbox" name="problem" value="pr_upgrade"><span data-i18n="pr_upgrade"></span></label>
+            <label class="opt"><input type="checkbox" name="problem" value="pr_print"><span data-i18n="pr_print"></span></label>
+            <label class="opt"><input type="checkbox" name="problem" value="pr_other"><span data-i18n="pr_other"></span></label>
+          </div>
+        </fieldset>
+        <div class="form-fields">
+          <label class="field"><span data-i18n="rp_details"></span><textarea name="details" rows="3"></textarea></label>
+        </div>
+        <fieldset class="q">
+          <legend data-i18n="rp_how"></legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="visit" value="rv_shop" checked><span data-i18n="rv_shop"></span></label>
+            <label class="opt"><input type="radio" name="visit" value="rv_pickup"><span data-i18n="rv_pickup"></span></label>
+          </div>
+        </fieldset>
+        <div class="form-fields">
+          <label class="field"><span data-i18n="q_name"></span><input name="name" autocomplete="name"></label>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-wa btn-block"><span data-icon="whatsapp"></span><span data-i18n="rp_send"></span></button>
+          <p class="form-note" data-i18n="rp_photo"></p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div data-layout="footer"></div>
+  <div data-layout="bottom"></div>
+  <div data-layout="quote"></div>
+
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/art.js"></script>
+  <script src="data/sample-products.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/quote.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
