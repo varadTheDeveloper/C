@@ -9,8 +9,7 @@ cd pc-shop
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000. (Opening `index.html` directly won't load the products,
-because browsers block reading files that way.)
+Then open http://localhost:8000.
 
 ## Pages
 
