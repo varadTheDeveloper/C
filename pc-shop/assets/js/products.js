@@ -54,7 +54,8 @@
         condition: (o.condition || "new").toLowerCase(),
         offer: yes(o.offer),
         featured: yes(o.featured),
-        image: driveToImage(o.image)
+        image: driveToImage(o.image),
+        source: o.source || ""
       };
     }).filter(function (p) { return p.name; });
   }

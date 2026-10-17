@@ -61,12 +61,19 @@
     if (offer && !SHOP.offer.show) offer.remove();
   }
 
+  function catImage(c) {
+    var src = SHOP.categoryImages && SHOP.categoryImages[c];
+    return src ? '<img src="' + esc(src) + '" alt="" loading="lazy" data-fallback="' + c + '" data-seed="cat-' + c + '">' : ART.make(c, "cat-" + c);
+  }
+
+  function productHref(p) { return "product.html?id=" + encodeURIComponent(p.id); }
+
   function renderCategories() {
     var row = document.getElementById("categories");
     if (row) {
       row.innerHTML = CATEGORIES.map(function (c) {
         return '<li><a class="cat" href="' + catHref(c) + '">' +
-          '<span class="cat-art">' + ART.make(c, "cat-" + c) + "</span>" +
+          '<span class="cat-art">' + catImage(c) + (c === "repair" ? '<span class="cat-badge">' + ICONS.get("repair", 16) + "</span>" : "") + "</span>" +
           '<span class="cat-name">' + esc(t("cat_" + c)) + "</span></a></li>";
       }).join("");
     }
@@ -104,12 +111,12 @@
 
   function card(p) {
     return '<li class="card" data-card="' + esc(p.id) + '">' +
+      '<a class="card-link" href="' + productHref(p) + '" aria-label="' + esc(p.name) + '"></a>' +
       '<div class="card-media">' + photo(p) +
       '<div class="tags">' +
       (p.offer ? '<span class="tag tag-offer">' + esc(t("badge_offer")) + "</span>" : "") +
       (p.condition === "open-box" ? '<span class="tag tag-box">' + esc(t("cond_open")) + "</span>" : "") +
       "</div>" +
-      (Products.isSample() ? '<span class="tag tag-sample" title="' + esc(t("sample_note")) + '">' + esc(t("sample_badge")) + "</span>" : "") +
       "</div>" +
       '<div class="card-body">' +
       '<p class="card-brand">' + esc(p.brand || " ") + "</p>" +
@@ -191,8 +198,9 @@
       }
       box.innerHTML = '<ul class="sr-list">' + hits.map(function (p) {
         return '<li class="sr-item" data-card="' + esc(p.id) + '">' +
+          '<a class="sr-link" href="' + productHref(p) + '">' +
           '<span class="sr-art">' + photo(p) + "</span>" +
-          '<span class="sr-text"><strong>' + esc(p.name) + "</strong><span>" + esc(shortSpecs(p)) + "</span></span>" +
+          '<span class="sr-text"><strong>' + esc(p.name) + "</strong><span>" + esc(shortSpecs(p)) + "</span></span></a>" +
           '<span class="card-add">' + addControl(p) + "</span></li>";
       }).join("") + "</ul>";
     }
@@ -462,11 +470,90 @@
     root.innerHTML = items.length ? rail("builds", t("bp_rail"), items, catHref("pc-setups")) : "";
   }
 
+  /* ---------- PRODUCT PAGE ---------- */
+  function renderProductPage() {
+    var root = document.getElementById("pd");
+    if (!root || !loaded) return;
+    var id = new URLSearchParams(location.search).get("id");
+    var p = byId(id);
+    var nf = document.getElementById("pd-notfound");
+    if (!p) { root.hidden = true; nf.hidden = false; return; }
+    nf.hidden = true; root.hidden = false;
+    document.title = p.name + " | Computer Warehouse Jalna";
+    var cat = t("cat_" + p.category);
+    document.getElementById("pd-crumb-cat").textContent = cat;
+    document.getElementById("pd-crumb-cat").href = catHref(p.category);
+    document.getElementById("pd-crumb-here").textContent = p.name;
+    document.getElementById("pd-photo").innerHTML = photo(p) +
+      '<div class="tags">' + (p.offer ? '<span class="tag tag-offer">' + esc(t("badge_offer")) + "</span>" : "") +
+      (p.condition === "open-box" ? '<span class="tag tag-box">' + esc(t("cond_open")) + "</span>" : "") + "</div>";
+    document.getElementById("pd-brand").textContent = p.brand || "";
+    document.getElementById("pd-name").textContent = p.name;
+    var stock = document.getElementById("pd-stock");
+    stock.className = "pd-stock stock-" + p.stock;
+    stock.innerHTML = esc(stockLabel(p.stock)) + (p.warranty ? '<span class="pd-warranty">' + esc(t("warranty")) + " " + esc(p.warranty) + "</span>" : "");
+    document.getElementById("pd-highlights").innerHTML = p.specs.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("");
+    var rows = [[t("f_brand"), p.brand], [t("pd_category"), cat], [t("f_condition"), p.condition === "open-box" ? t("cond_open") : t("cond_new")],
+      [t("warranty"), p.warranty], [t("pd_features"), p.specs.join(", ")]];
+    document.getElementById("pd-table").innerHTML = rows.filter(function (r) { return r[1]; })
+      .map(function (r) { return "<tr><th scope=\"row\">" + esc(r[0]) + "</th><td>" + esc(r[1]) + "</td></tr>"; }).join("");
+    var link = location.href.split("#")[0];
+    var msg = t("wa_product") + "\n" + p.name + "\n" + link;
+    document.querySelectorAll("[data-pd-wa]").forEach(function (a) { a.href = Quote.waLink(msg); });
+    renderPdAdd(p);
+    var similar = sortForShow(products.filter(function (x) { return x.category === p.category && x.id !== p.id; }));
+    document.getElementById("pd-similar").innerHTML = similar.length ? rail("similar", t("pd_similar"), similar, catHref(p.category)) : "";
+  }
+
+  function renderPdAdd(p) {
+    var id = new URLSearchParams(location.search).get("id");
+    p = p || byId(id);
+    if (!p) return;
+    var q = Quote.qty(p.id);
+    document.querySelectorAll("[data-pd-add]").forEach(function (b) {
+      b.disabled = p.stock === "out";
+      b.classList.toggle("is-added", q > 0);
+      b.querySelector("span:last-child").textContent = p.stock === "out" ? t("stock_out") : q > 0 ? t("pd_view_list") : t("add_quote");
+    });
+  }
+
+  function initProductPage() {
+    if (!document.getElementById("pd")) return;
+    document.querySelectorAll("[data-pd-add]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var p = byId(new URLSearchParams(location.search).get("id"));
+        if (!p) return;
+        if (Quote.qty(p.id)) { document.querySelector("[data-open-quote]").click(); return; }
+        Quote.add(p);
+      });
+    });
+    var share = document.getElementById("pd-share");
+    if (share) share.addEventListener("click", function () {
+      var url = location.href.split("#")[0];
+      if (navigator.share) { navigator.share({ title: document.title, url: url }).catch(function () {}); return; }
+      try { navigator.clipboard.writeText(url).then(function () { share.querySelector("span:last-child").textContent = t("pd_copied"); }); } catch (e) {}
+    });
+    document.addEventListener("quotechange", function () { renderPdAdd(); });
+    document.getElementById("pd-similar").addEventListener("click", handleCardClick);
+  }
+
+  function previewBar() {
+    if (!Products.isSample() || document.querySelector(".preview-bar")) return;
+    var h = document.querySelector(".header");
+    if (!h) return;
+    var bar = document.createElement("p");
+    bar.className = "preview-bar";
+    bar.setAttribute("data-i18n", "preview_bar");
+    bar.textContent = t("preview_bar");
+    h.insertAdjacentElement("afterend", bar);
+  }
+
   /* ---------- load ---------- */
   function renderProductViews() {
     renderHomeRails();
     renderProductsPage();
     renderBuildRail();
+    renderProductPage();
   }
 
   function refreshText() {
@@ -491,10 +578,12 @@
       holder.innerHTML = ART.make(img.getAttribute("data-fallback"), img.getAttribute("data-seed"));
       img.replaceWith(holder);
     }, true);
+    previewBar();
     i18n.apply();
     fillIcons();
     Quote.init();
     initProductsPage();
+    initProductPage();
     refreshText();
     initSlider();
     initSearch();

@@ -1,22 +1,42 @@
-id,name,category,brand,specs,warranty,stock,condition,offer,featured,image
-ryzen5-5600gt-b550,Ryzen 5 gaming / performance PC,pc-setups,AMD + MSI,AMD Ryzen 5 5600GT | MSI B550 Wi-Fi 6 motherboard | 16GB RAM | 512GB NVMe SSD | 500W SMPS | RGB gaming cabinet,3 years,in,new,yes,yes,assets/products/amd-ryzen-5.jpg
-i5-12th-gt730-setup,Intel i5 12th Gen complete computer setup,pc-setups,Intel + MSI,Intel Core i5 12th Gen | MSI H610 motherboard | 8GB RAM | 512GB SSD | NVIDIA GT 730 4GB | 22-inch IPS monitor | Keyboard + mouse,,in,new,yes,yes,assets/products/intel-core-i5.jpg
-trading-setup-24,Complete trading setup with 24-inch display,pc-setups,Intel,Intel Core i5 | 8GB RAM | 256GB SSD | 24-inch IPS display | Metal cabinet + copper power supply | Screen stand | RGB keyboard + mouse,3 years,in,new,no,yes,assets/products/intel-core-i5.jpg
-i5-budget-setup-22,Budget complete computer setup,pc-setups,Intel,Intel Core i5 | 8GB RAM | 256GB SSD | 22-inch IPS monitor | Premium metal cabinet | RGB keyboard + mouse,,in,new,yes,yes,assets/products/intel-core-i5.jpg
-ryzen5-setup-100hz,Ryzen 5 computer setup with 100Hz monitor,pc-setups,AMD,Ryzen 5 processor | 8GB DDR4 RAM | 512GB NVMe SSD | 500W SMPS | 22-inch IPS monitor 100Hz | RGB keyboard + mouse,,in,new,yes,no,assets/products/amd-ryzen-5.jpg
-ryzen5-5600gt-acer24,Ryzen 5 gaming setup with Acer 24-inch monitor,pc-setups,AMD + Acer,AMD Ryzen 5 5600GT | 16GB DDR4 3200MHz | 512GB NVMe SSD | 650W 80+ Bronze | RGB cabinet with Type-C | Acer 24-inch monitor,3 years,in,new,no,no,assets/products/amd-ryzen-5.jpg
-ryzen7-5700x-gaming,Ryzen 7 gaming and editing PC,pc-setups,AMD,AMD Ryzen 7 5700X | Wi-Fi motherboard | 16GB HP RGB RAM | 512GB NVMe SSD | 4GB graphics card | 550W 80+ Bronze,,in,new,no,no,assets/products/amd-ryzen-7.jpg
-ryzen5-rtx3050-setup,Ryzen 5 + RTX 3050 gaming setup,pc-setups,AMD + NVIDIA,Ryzen 5 5600 | 16GB RAM | 512GB NVMe SSD | RTX 3050 6GB | 550W 80+ power supply | RGB gaming cabinet,,order,new,no,yes,assets/products/amd-ryzen-5.jpg
-ryzen7-7700x-rtx5060-white,Ryzen 7 7700X + RTX 5060 white build,pc-setups,AMD + MSI + Thermaltake,Ryzen 7 7700X | Colorful white RTX 5060 | MSI B850M Gaming Plus WiFi | 16GB DDR5 5600MHz | 1TB NVMe Gen4 SSD | 360mm white liquid cooler | 750W Gold PSU,,order,new,no,no,assets/products/amd-ryzen-7-7700x.jpg
-i7-14th-rtx5060ti,Intel i7 14th Gen + RTX 5060 Ti gaming PC,pc-setups,Intel + NVIDIA,Intel Core i7 14th Gen | B760M WiFi motherboard | 16GB DDR5 RAM | 1TB NVMe SSD | RTX 5060 Ti 8GB,,order,new,no,no,assets/products/intel-core-i7.jpg
-dual-screen-trading,Two-screen trading setup,pc-setups,,Two monitors for charts and multiple windows | Built and tested in the shop,,order,new,no,no,
-lenovo-aio-i3-27,Lenovo All-in-One PC 27-inch,pc-setups,Lenovo,Intel Core i3 13th Gen | 8GB RAM | 512GB SSD | 27-inch display | New box pack,1 year,order,new,no,no,
-lenovo-360-i5,Lenovo 360° touchscreen laptop,laptops,Lenovo,Intel Core i5 8th Gen | 8GB RAM | 256GB SSD | 360° convertible touchscreen | Pen support,,in,new,yes,yes,
-hp-i5-metal,HP metal body laptop,laptops,HP,Intel Core i5 8th Gen | 8GB RAM | 256GB SSD | Metal body | Windows 11 Pro,,in,new,no,yes,
-dell-latitude-5400-touch,Dell Latitude 5400 touchscreen laptop,laptops,Dell,Intel Core i5 8th Gen | 8GB RAM | 256GB SSD | Touchscreen | Windows 11 Pro,,in,new,no,yes,
-hp-elitebook-840-g7,HP EliteBook 840 G7 business laptop,laptops,HP,Intel Core i5 10th Gen | 8GB RAM | 256GB SSD | 14-inch display | Full metal body | Fingerprint sensor,,in,new,no,yes,assets/products/hp-elitebook-840.jpg
-rtx4050-gaming-laptop-ob,RTX 4050 gaming laptop,open-box,,NVIDIA RTX 4050 graphics | Open box,1 year,order,open-box,no,yes,
-mac-mini-m4-ob,Apple Mac Mini M4,open-box,Apple,10-core CPU + 10-core GPU | 16GB unified memory | 256GB SSD | 3× Thunderbolt 4 + HDMI,5 months,out,open-box,no,no,assets/products/apple-mac-mini.jpg
-canon-3012-wifi,Canon 3012 Wi-Fi printer,printers,Canon,Wi-Fi printing | For home / office / shop | 2 black ink bottles free,,in,new,yes,yes,assets/products/canon-pixma-g3012.jpg
-canon-2012,Canon 2012 printer,printers,Canon,For home / office / shop | 2 black ink bottles free,,in,new,yes,yes,assets/products/canon-pixma-g2012.jpg
-acer-nitro-30-curved,Acer Nitro 30-inch curved gaming monitor,monitors,Acer,30-inch curved display | Gaming monitor,,order,new,no,yes,
+id,name,category,brand,specs,warranty,stock,condition,offer,featured,image,source
+ryzen5-5600gt-b550,Ryzen 5 gaming / performance PC,pc-setups,AMD + MSI,AMD Ryzen 5 5600GT | MSI B550 Wi-Fi 6 motherboard | 16GB RAM | 512GB NVMe SSD | 500W SMPS | RGB gaming cabinet,3 years,in,new,yes,yes,assets/products/amd-ryzen-5.jpg,instagram
+i5-12th-gt730-setup,Intel i5 12th Gen complete computer setup,pc-setups,Intel + MSI,Intel Core i5 12th Gen | MSI H610 motherboard | 8GB RAM | 512GB SSD | NVIDIA GT 730 4GB | 22-inch IPS monitor | Keyboard + mouse,,in,new,yes,yes,assets/products/intel-core-i5.jpg,instagram
+trading-setup-24,Complete trading setup with 24-inch display,pc-setups,Intel,Intel Core i5 | 8GB RAM | 256GB SSD | 24-inch IPS display | Metal cabinet + copper power supply | Screen stand | RGB keyboard + mouse,3 years,in,new,no,yes,assets/products/intel-core-i5.jpg,instagram
+i5-budget-setup-22,Budget complete computer setup,pc-setups,Intel,Intel Core i5 | 8GB RAM | 256GB SSD | 22-inch IPS monitor | Premium metal cabinet | RGB keyboard + mouse,,in,new,yes,yes,assets/products/intel-core-i5.jpg,instagram
+ryzen5-setup-100hz,Ryzen 5 computer setup with 100Hz monitor,pc-setups,AMD,Ryzen 5 processor | 8GB DDR4 RAM | 512GB NVMe SSD | 500W SMPS | 22-inch IPS monitor 100Hz | RGB keyboard + mouse,,in,new,yes,no,assets/products/amd-ryzen-5.jpg,instagram
+ryzen5-5600gt-acer24,Ryzen 5 gaming setup with Acer 24-inch monitor,pc-setups,AMD + Acer,AMD Ryzen 5 5600GT | 16GB DDR4 3200MHz | 512GB NVMe SSD | 650W 80+ Bronze | RGB cabinet with Type-C | Acer 24-inch monitor,3 years,in,new,no,no,assets/products/amd-ryzen-5.jpg,instagram
+ryzen7-5700x-gaming,Ryzen 7 gaming and editing PC,pc-setups,AMD,AMD Ryzen 7 5700X | Wi-Fi motherboard | 16GB HP RGB RAM | 512GB NVMe SSD | 4GB graphics card | 550W 80+ Bronze,,in,new,no,no,assets/products/amd-ryzen-7.jpg,instagram
+ryzen5-rtx3050-setup,Ryzen 5 + RTX 3050 gaming setup,pc-setups,AMD + NVIDIA,Ryzen 5 5600 | 16GB RAM | 512GB NVMe SSD | RTX 3050 6GB | 550W 80+ power supply | RGB gaming cabinet,,order,new,no,yes,assets/products/amd-ryzen-5.jpg,instagram
+ryzen7-7700x-rtx5060-white,Ryzen 7 7700X + RTX 5060 white build,pc-setups,AMD + MSI + Thermaltake,Ryzen 7 7700X | Colorful white RTX 5060 | MSI B850M Gaming Plus WiFi | 16GB DDR5 5600MHz | 1TB NVMe Gen4 SSD | 360mm white liquid cooler | 750W Gold PSU,,order,new,no,no,assets/products/amd-ryzen-7-7700x.jpg,instagram
+i7-14th-rtx5060ti,Intel i7 14th Gen + RTX 5060 Ti gaming PC,pc-setups,Intel + NVIDIA,Intel Core i7 14th Gen | B760M WiFi motherboard | 16GB DDR5 RAM | 1TB NVMe SSD | RTX 5060 Ti 8GB,,order,new,no,no,assets/products/intel-core-i7.jpg,instagram
+hp-elitebook-840-g7,HP EliteBook 840 G7 business laptop,laptops,HP,Intel Core i5 10th Gen | 8GB RAM | 256GB SSD | 14-inch display | Full metal body | Fingerprint sensor,,in,new,no,yes,assets/products/hp-elitebook-840.jpg,instagram
+mac-mini-m4-ob,Apple Mac Mini M4,open-box,Apple,10-core CPU + 10-core GPU | 16GB unified memory | 256GB SSD | 3× Thunderbolt 4 + HDMI,5 months,out,open-box,no,no,assets/products/apple-mac-mini.jpg,instagram
+canon-3012-wifi,Canon 3012 Wi-Fi printer,printers,Canon,Wi-Fi printing | For home / office / shop | 2 black ink bottles free,,in,new,yes,yes,assets/products/canon-pixma-g3012.jpg,instagram
+canon-2012,Canon 2012 printer,printers,Canon,For home / office / shop | 2 black ink bottles free,,in,new,yes,yes,assets/products/canon-pixma-g2012.jpg,instagram
+hp-15s,HP 15s laptop,laptops,HP,15.6-inch display | Intel Core i3 / i5 options | SSD storage | Windows 11 | Ask for available configurations,,order,new,no,yes,assets/products/hp-15s.jpg,starter
+hp-victus-15,HP Victus 15 gaming laptop,laptops,HP,15.6-inch gaming display | NVIDIA GeForce RTX graphics options | Intel Core / AMD Ryzen options | Windows 11 | Ask for available configurations,,order,new,no,yes,assets/products/hp-victus-15.jpg,starter
+hp-pavilion-14,HP Pavilion 14 laptop,laptops,HP,14-inch display | Thin and light design | Intel Core options | Windows 11 | Ask for available configurations,,order,new,no,no,assets/products/hp-pavilion-14.jpg,starter
+asus-vivobook-15,ASUS Vivobook 15 laptop,laptops,ASUS,15.6-inch display | Intel Core options | Windows 11 | Ask for available configurations,,order,new,no,yes,assets/products/asus-vivobook-15.jpg,starter
+acer-aspire-ryzen,Acer Aspire laptop (AMD Ryzen),laptops,Acer,15.6-inch display | AMD Ryzen options | Windows 11 | Ask for available configurations,,order,new,no,no,assets/products/acer-aspire-7.jpg,starter
+macbook-air-13,Apple MacBook Air 13-inch,laptops,Apple,13-inch Retina display | Apple M-series chip | macOS | Ask for available configurations,,order,new,no,yes,assets/products/apple-macbook-air-13.jpg,starter
+msi-thin-gf63,MSI Thin GF63 gaming laptop,laptops,MSI,15.6-inch gaming display | Intel Core processor | NVIDIA GeForce RTX graphics | Ask for available configurations,,order,new,no,no,assets/products/msi-thin-gf63.jpg,starter
+hp-victus-15l,HP Victus 15L gaming desktop,pc-setups,HP,Gaming desktop (cabinet only) | NVIDIA GeForce RTX graphics options | Intel Core / AMD Ryzen options | Ask for available configurations,,order,new,no,no,assets/products/hp-victus-15l-desktop.jpg,starter
+brother-dcp-t420w,Brother DCP-T420W ink tank printer,printers,Brother,"Ink tank printer | Print, copy, scan | Wi-Fi",,order,new,no,yes,assets/products/brother-dcp-t420w.jpg,starter
+hp-smart-tank-580,HP Smart Tank 580 printer,printers,HP,"Ink tank all-in-one | Print, copy, scan | Wi-Fi",,order,new,no,yes,assets/products/hp-smart-tank-580.jpg,starter
+canon-lbp122dw,Canon imageCLASS LBP122dw laser printer,printers,Canon,Black and white laser printer | Wi-Fi | Auto two-sided printing,,order,new,no,no,assets/products/canon-lbp122dw.jpg,starter
+msi-pro-mp241x,MSI PRO MP241X 24-inch monitor,monitors,MSI,24-inch Full HD | 75Hz | For office and home,,order,new,no,yes,assets/products/msi-pro-mp241x.jpg,starter
+msi-g244f,MSI G244F 24-inch gaming monitor,monitors,MSI,23.8-inch IPS | 170Hz | 1ms response time,,order,new,no,yes,assets/products/msi-g244f.jpg,starter
+msi-g274f,MSI G274F 27-inch gaming monitor,monitors,MSI,27-inch IPS | 180Hz | For gaming,,order,new,no,no,assets/products/msi-g274f.jpg,starter
+amd-ryzen-5-5600gt,AMD Ryzen 5 5600GT processor,parts,AMD,"6 cores, 12 threads | AM4 socket | Built-in Radeon graphics",,order,new,no,yes,assets/products/amd-ryzen-5.jpg,starter
+amd-ryzen-7-7700x,AMD Ryzen 7 7700X processor,parts,AMD,"8 cores, 16 threads | AM5 socket | DDR5 memory",,order,new,no,no,assets/products/amd-ryzen-7-7700x.jpg,starter
+intel-core-i5-12400,Intel Core i5-12400 processor,parts,Intel,"6 cores, 12 threads | LGA 1700 socket | Intel UHD 730 graphics",,order,new,no,yes,assets/products/intel-core-i5.jpg,starter
+asus-dual-rtx-5060,ASUS Dual GeForce RTX 5060 graphics card,parts,ASUS,NVIDIA GeForce RTX 5060 | 8GB GDDR7 | Dual-fan cooler,,order,new,no,yes,assets/products/rtx-5060.jpg,starter
+msi-rtx-5060-ti,MSI GeForce RTX 5060 Ti graphics card,parts,MSI,NVIDIA GeForce RTX 5060 Ti | 8GB / 16GB versions | Triple-fan cooler,,order,new,no,no,assets/products/msi-rtx-5060-ti.jpg,starter
+gigabyte-rtx-3050,GIGABYTE GeForce RTX 3050 graphics card,parts,Gigabyte,NVIDIA GeForce RTX 3050 | Dual-fan cooler,,order,new,no,no,assets/products/gigabyte-rtx-3050.jpg,starter
+msi-b550m-pro-vdh-wifi,MSI B550M PRO-VDH WIFI motherboard,parts,MSI,AMD AM4 socket | Micro-ATX | Wi-Fi | DDR4,,order,new,no,no,assets/products/msi-b550m-pro-vdh-wifi.jpg,starter
+msi-pro-h610m-e,MSI PRO H610M-E motherboard,parts,MSI,Intel LGA 1700 socket | Micro-ATX | DDR4,,order,new,no,no,assets/products/msi-pro-h610m-e.jpg,starter
+gigabyte-b760m-ds3h,GIGABYTE B760M DS3H motherboard,parts,Gigabyte,Intel LGA 1700 socket | Micro-ATX | DDR4 / DDR5 versions,,order,new,no,no,assets/products/gigabyte-b760m-ds3h.jpg,starter
+msi-mag-a650bn,MSI MAG A650BN 650W power supply,parts,MSI,650W | 80 Plus Bronze | ATX,,order,new,no,no,assets/products/msi-mag-a650bn.jpg,starter
+msi-mag-forge-100r,MSI MAG FORGE 100R gaming cabinet,parts,MSI,Gaming cabinet | Tempered glass side panel | ARGB fans,,order,new,no,yes,assets/products/msi-mag-forge-100r.jpg,starter
+zebronics-wireless-combo,Zebronics wireless keyboard and mouse combo,accessories,Zebronics,Keyboard + mouse combo | Wireless with USB receiver,,order,new,no,yes,assets/products/zebronics-keyboard-mouse.jpg,starter
+hp-wireless-mouse,HP wireless mouse,accessories,HP,Wireless mouse | USB receiver,,order,new,no,yes,assets/products/hp-wireless-mouse.jpg,starter

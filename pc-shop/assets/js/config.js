@@ -36,6 +36,18 @@ window.SHOP = {
   // The text for each language is in i18n.js (offer_title, offer_body).
   offer: { show: true },
 
+  // Real photos for the category tiles (assets/products/...)
+  categoryImages: {
+    laptops: "assets/products/hp-15s.jpg",
+    "pc-setups": "assets/products/msi-mag-forge-100r.jpg",
+    printers: "assets/products/canon-pixma-g3012.jpg",
+    "open-box": "assets/products/apple-mac-mini.jpg",
+    monitors: "assets/products/msi-g244f.jpg",
+    parts: "assets/products/rtx-5060.jpg",
+    accessories: "assets/products/zebronics-keyboard-mouse.jpg",
+    repair: "assets/products/hp-pavilion-14.jpg"
+  },
+
   // Brands on the signboard
   brands: [
     "Apple", "HP", "Dell", "ASUS", "Lenovo", "MSI", "Acer", "Samsung",

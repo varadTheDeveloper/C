@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="mr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Product | Computer Warehouse Jalna</title>
+  <meta name="description" content="Product details at Computer Warehouse Jalna. Add to your quote list and get today's price on WhatsApp.">
+  <meta name="theme-color" content="#2A6BE6">
+  <link rel="preload" href="assets/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/noto-sans-devanagari-devanagari-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="product">
+  <a class="skip" href="#main" data-i18n="skip"></a>
+  <div data-layout="header"></div>
+
+  <main id="main" class="pd-page">
+    <div class="wrap">
+      <div class="pd" id="pd" hidden>
+        <div class="pd-gallery">
+          <div class="pd-photo" id="pd-photo"></div>
+          <div class="pd-actions">
+            <button type="button" class="btn btn-add-lg" data-pd-add><span data-icon="quote"></span><span data-i18n="add_quote"></span></button>
+            <a class="btn btn-wa btn-wa-lg" data-pd-wa href="#" target="_blank" rel="noopener"><span data-icon="whatsapp"></span><span data-i18n="pd_ask"></span></a>
+          </div>
+        </div>
+
+        <div class="pd-info">
+          <nav class="crumbs" aria-label="Breadcrumb">
+            <a href="index.html" data-i18n="crumb_home"></a>
+            <span data-icon="chevron-right" data-size="14"></span>
+            <a id="pd-crumb-cat" href="products.html"></a>
+            <span data-icon="chevron-right" data-size="14"></span>
+            <span id="pd-crumb-here" aria-current="page"></span>
+          </nav>
+          <p class="pd-brand" id="pd-brand"></p>
+          <h1 class="pd-name" id="pd-name"></h1>
+          <p class="pd-stock" id="pd-stock"></p>
+
+          <div class="pd-price">
+            <p class="pd-price-t"><span data-icon="whatsapp"></span><span data-i18n="price_on_wa"></span></p>
+            <p class="pd-price-b" data-i18n="pd_price_b"></p>
+          </div>
+
+          <section class="pd-block" aria-labelledby="pd-h-high">
+            <h2 class="pd-h" id="pd-h-high" data-i18n="pd_highlights"></h2>
+            <ul class="pd-highlights" id="pd-highlights"></ul>
+          </section>
+
+          <section class="pd-block pd-services">
+            <div class="pd-service">
+              <span class="pd-service-icon" data-icon="truck"></span>
+              <div><h2 class="pd-h" data-i18n="pd_delivery_t"></h2><p data-i18n="pd_delivery_b"></p></div>
+            </div>
+            <div class="pd-service">
+              <span class="pd-service-icon" data-icon="shield"></span>
+              <div><h2 class="pd-h" data-i18n="pd_pay_t"></h2><p data-i18n="trust_pay"></p></div>
+            </div>
+            <div class="pd-service">
+              <span class="pd-service-icon" data-icon="pin"></span>
+              <div>
+                <h2 class="pd-h" data-i18n="pd_seller_t"></h2>
+                <p><strong>Computer Warehouse Jalna</strong> · <a data-place-link href="#" target="_blank" rel="noopener"><span data-rating></span></a></p>
+                <p data-i18n="address"></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="pd-block" aria-labelledby="pd-h-spec">
+            <h2 class="pd-h" id="pd-h-spec" data-i18n="pd_specs"></h2>
+            <table class="pd-table"><tbody id="pd-table"></tbody></table>
+          </section>
+
+          <button type="button" class="link-btn pd-share" id="pd-share"><span data-icon="share" data-size="16"></span><span data-i18n="pd_share"></span></button>
+        </div>
+      </div>
+
+      <div class="pp-empty pd-notfound" id="pd-notfound" hidden>
+        <h1 class="h2" data-i18n="pd_notfound_t"></h1>
+        <p data-i18n="pd_notfound_b"></p>
+        <a class="btn" href="products.html" data-i18n="featured_more"></a>
+      </div>
+    </div>
+    <div id="pd-similar"></div>
+  </main>
+
+  <div class="pd-bar">
+    <button type="button" class="btn btn-add-lg" data-pd-add><span data-icon="quote"></span><span data-i18n="add_quote"></span></button>
+    <a class="btn btn-wa btn-wa-lg" data-pd-wa href="#" target="_blank" rel="noopener"><span data-icon="whatsapp"></span><span data-i18n="pd_ask"></span></a>
+  </div>
+
+  <div data-layout="footer"></div>
+  <div data-layout="bottom"></div>
+  <div data-layout="quote"></div>
+
+  <script src="assets/js/layout.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/art.js"></script>
+  <script src="data/sample-products.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/quote.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
